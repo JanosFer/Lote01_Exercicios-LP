@@ -2,18 +2,17 @@
 import javax.swing.JOptionPane;
 public class Ex_Recursividade04 {
     public static void main (String[] args){
-        double num = Double.parseDouble(JOptionPane.showInputDialog("Informe um valor: "));
-        double den, retorno;
-        den = 1;
+        double num = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor inicial do numerador da série: "));
+        double den = 1, retorno;
 
         retorno = FrecIV((float) num, den);
         System.out.printf("Soma da série = %.2f", retorno);
     }
     static double FrecIV(double n, double d){
         if (n > 1){
-            return (n/d) + FrecIV(--n, ++d);
+            return (n / d) + FrecIV(--n, ++d);
         }else{
-            return n/d;
+            return n / d;
         }
     }
 }

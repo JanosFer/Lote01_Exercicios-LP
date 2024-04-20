@@ -7,12 +7,12 @@ public class Ex_Matriz01 {
         int totalMes = 0;
         Random aleatorio = new Random();
 
-        for(int x = 0; x < 4; x++){
-            for(int y = 0; y < 3; y++){
-                mat[x][y] = aleatorio.nextInt(100);
-                prodPorSem[x] += mat[x][y];
-                cadaProdMes[y] += mat[x][y];
-                totalMes += cadaProdMes[y];
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 3; j++){
+                mat[i][j] = aleatorio.nextInt(100);
+                prodPorSem[i] += mat[i][j];
+                cadaProdMes[j] += mat[i][j];
+                totalMes += cadaProdMes[j];
             }
         }
         for(int x = 0; x < 4; x++){
